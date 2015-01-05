@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block contentinmuebles %}
+	<h1>{{ object.title }}</h1>
+	<div>
+		<figure>
+			<p>{{object.titulo}}</p>
+			<img src="../../media/{{ object.logo }}" alt="">
+			<figcaption>{{object.id_tipoInmueble.nombre}}</figcaption>
+		</figure>
+	</div>
+	<div>
+		<ul>
+			{% for inmueble in object.inmueble_set.all %}
+			<li>{{inmueble}}</li>
+			{% empty %}
+				<div>no hay inmuebles todabia</div>
+			{% endfor %}	
+		</ul>
+	</div>
+
+{% endblock %}

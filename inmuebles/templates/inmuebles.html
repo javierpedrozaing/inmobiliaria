@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% if is_auth %}
+	<a href="">Cerrar sesion</a>
+{% else %}
+	<a href="">Iniciar sesion</a>
+{% endif %}
+
+
+{% block contentinmuebles %}
+	<div>
+		<h2>Todos los Inmuebles</h2>
+	</div>
+
+	<div>
+		{% for inmueble in object_list %}
+		<ul>
+			<li>
+			<a href="{{inmueble.titulo}}"><p>{{inmueble.titulo}}</p></a>	
+			<img src="{{os.path.join}}/media/{{ inmueble.logo }}" alt="{{inmueble.titulo}}" width="250px">				
+			<p>{{inmueble.codigo}}</p>
+			<p>{{inmueble.direccion}}</p>	
+			<p>{{inmueble.telefono}}</p>
+			</li>			
+		</ul>
+		{% empty %}
+			<div>No hay inmuebles todavía</div>
+		{% endfor %}
+	</div>
+	
+
+{% endblock %}

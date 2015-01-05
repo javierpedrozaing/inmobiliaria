@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GESTION INMOBILIARIA</title>
+</head>
+<body>
+	<h1>BIENVENIDOS A GESTION INMOBILIARIA</h1>
+	<!--http://www.rvinmobiliaria.com/index.php/ -->
+	<nav>
+		<ul>
+			<li>Inicio</li>
+			<li>Arrendatarios</li>
+			<li>Propietarios</li>
+			<li>Adiministradores</li>
+			<li>Empresa</li>
+			<li>Servicios</li>
+			<li>Contactos</li>
+		</ul>
+	</nav>
+	<section class="buscador">
+		<span>Encuentre su Inmueble</span>
+		<select name="" id="">
+			<option value="">Tipo de servicio</option>
+			<option value=""></option>
+			<option value=""></option>
+		</select>
+		<select name="" id="">
+			<option value="">Tipo de Inmueble</option>
+			<option value=""></option>
+			<option value=""></option>
+		</select>
+		<select name="" id="">
+			<option value="">Seleccione la ciudad</option>
+			<option value=""></option>
+			<option value=""></option>
+		</select>
+		<select name="" id="">
+			<option value="">Valor Inmueble</option>
+			<option value=""></option>
+			<option value=""></option>
+		</select>
+		<input type="button" value="BUSCAR">
+	</section>
+
+	{% block contentinmuebles %}
+	<br/><br/><br/>
+
+		Algunos inmuuebles
+	{% endblock contentinmuebles %}
+
+
+</body>
+
+</html>
